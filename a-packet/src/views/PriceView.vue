@@ -13,6 +13,8 @@ export default {
 <style scoped>
 .pricing {
     min-height: 820px;
+    margin: 0 auto;
+    width: 80%;
 }
 h1 {
     text-align: center;
@@ -61,9 +63,8 @@ section.pricing .disc {
     transform: rotate(30deg);
 }
 section.pricing .price-container {
-    display: grid;
-    gap: 40px;
-    grid-template-columns: repeat(auto-fill,15em);
+    display: flex;
+    justify-content: space-between;
     margin: 0 auto;
     padding-bottom: 100px;
     padding-top: 50px;
@@ -189,12 +190,18 @@ section.pricing .price-container .card-best svg {
     margin-bottom: -50px;
     position: relative;
     top: -25px;
-}
+/* }
 @media (min-width: 992px) {
     .pricing .price-container .card:hover {
     box-shadow: 0 0.5rem 1rem 0 rgba(233, 231, 231, 0.932);
     margin-bottom: 0.25rem;
     margin-top: -0.25rem;
+} */
+
+@media screen and (min-width: 600px) {
+    .price-container {
+        flex-direction: column;
+    }
 }
 }
 </style>

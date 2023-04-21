@@ -325,7 +325,7 @@ h3 {
 }
 
 /* Phone */
-@media screen and (max-width: 800px) {    
+@media screen and (max-width: 600px) {    
     .main {
         flex-direction: column;
     }
