@@ -5,6 +5,12 @@ import WiFi from '../components/icons/feature-icons/WiFi.vue';
 import ConnectCircle from '../components/icons/feature-icons/ConnectCircle.vue';
 import PcapIcon from '../components/icons/feature-icons/PcapIcon.vue';
 import SmbIcon from '../components/icons/feature-icons/SmbIcon.vue';
+import DnsIcon from '../components/icons/feature-icons/DnsIcon.vue';
+import ArpIcon from '../components/icons/feature-icons/ArpIcon.vue';
+import KeyIcon from '../components/icons/feature-icons/KeyIcon.vue';
+import ApiIcon from '../components/icons/feature-icons/ApiIcon.vue';
+import SslIcon from '../components/icons/feature-icons/SslIcon.vue';
+
 
 // import ScreenIcon from '../components/icons/feature-icons';
 </script>
@@ -175,132 +181,78 @@ import SmbIcon from '../components/icons/feature-icons/SmbIcon.vue';
             </FeatureItem>
             <FeatureItem reverseItem="true">
                 <template #icon>
-                    <ScreenIcon/>
+                    <DnsIcon/>
                 </template>
                 <template #text>
-                    <h3>View HTTP headers and HTTP communication</h3>
+                    <h3>DNS queries investigation</h3>
                     <p>
-                        Deep packet inspection allows you to dive 
-                        into HTTP communications. Explore HTTP 
-                        requests and responses. Web servers information 
-                        and payloads, collect forms data and analyze 
-                        transferred content.
+                        You can explore protocols DNS, mDNS 
+                        (Multicast DNS) and NBNS (NetBIOS Name 
+                        Service). Gather information about network
+                         structure and activities of running services.
                     </p>
                     <p>
-                        Wonder to view established HTTP sessions 
-                        and users credentials? Find transferred files 
-                        including office documents? Use A-Packets network 
-                        traffic analysis and integrated pcap file viewer.
-                    </p>
-                    <p>
-                        Analyze pcap file to investigate HTTP data in 
-                        details. View network traffic, rebuild 
-                        client-server communications step by step.
+                        Use filters to separate DNS traffic by type. 
+                        Analyze queries and responses from target servers.
+                         Find Multicast/broadcast addresses (in case of mDNS 
+                         and NBNS).
                     </p>
                 </template>
             </FeatureItem>
             <FeatureItem>
                 <template #icon>
-                    <ScreenIcon/>
+                    <ArpIcon/>
                 </template>
                 <template #text>
-                    <h3>View HTTP headers and HTTP communication</h3>
-                    <p>
-                        Deep packet inspection allows you to dive 
-                        into HTTP communications. Explore HTTP 
-                        requests and responses. Web servers information 
-                        and payloads, collect forms data and analyze 
-                        transferred content.
+                    <h3>Analyze ARP packets</h3>
+                    <p>ARP (Address Resolution Protocol) messages contains 
+                        valuable information about devices topology. It uses 
+                        MAC addresses on 
+                        <a target="_blank" rel="noreferrer" href="https://en.wikipedia.org/wiki/OSI_model#Layer_2:_Data_Link_Layer">
+                            Layer 2 (OSI)
+                        </a>. 
+                        You can elicit device-IP accordance directly from ARP requests and responses. 
+                        Investigate gratuitous ARP messages during devices boot.
                     </p>
-                    <p>
-                        Wonder to view established HTTP sessions 
-                        and users credentials? Find transferred files 
-                        including office documents? Use A-Packets network 
-                        traffic analysis and integrated pcap file viewer.
-                    </p>
-                    <p>
-                        Analyze pcap file to investigate HTTP data in 
-                        details. View network traffic, rebuild 
-                        client-server communications step by step.
+                    <p>Basic automatic analyze enables to detect various anomalies 
+                        in ARP communications. Detect routers and smart switches 
+                        and WiFi access points integrated into LAN. It is possible 
+                        to detect malicious activities like ARP spoofing nodes.
                     </p>
                 </template>
             </FeatureItem>
             <FeatureItem reverseItem="true">
                 <template #icon>
-                    <ScreenIcon/>
+                    <KeyIcon/>
                 </template>
                 <template #text>
-                    <h3>View HTTP headers and HTTP communication</h3>
-                    <p>
-                        Deep packet inspection allows you to dive 
-                        into HTTP communications. Explore HTTP 
-                        requests and responses. Web servers information 
-                        and payloads, collect forms data and analyze 
-                        transferred content.
-                    </p>
-                    <p>
-                        Wonder to view established HTTP sessions 
-                        and users credentials? Find transferred files 
-                        including office documents? Use A-Packets network 
-                        traffic analysis and integrated pcap file viewer.
-                    </p>
-                    <p>
-                        Analyze pcap file to investigate HTTP data in 
-                        details. View network traffic, rebuild 
-                        client-server communications step by step.
-                    </p>
+                    <h3>Find passwords in pcap file</h3>
+                    <p>A-Packets scans uploaded pcap file for various protocols to find user credentials. You can find plain text passwords in authorization headers or detect cryptographic hashes. The service is also looking for complex challenge-base auth protocols.</p>
+                    <p>You can extract passwords/hashes from protocols:</p>
+                    <ul><li>HTTP Basic/Digest/Negotiate</li><li>SIP Digest</li><li>NTLMv1/v2 (SMB)</li><li>Kerberos</li><li>LDAP</li><li>SNMP, IMAP, SMTP</li><li>Postgres, MSSQL (TDS 7.0+)</li><li>Telnet and FTP sessions</li></ul>
+                    <p>You can restore original passwords from obtained hashes with any hash-cracking tool.</p>
                 </template>
             </FeatureItem>
             <FeatureItem>
                 <template #icon>
-                    <ScreenIcon/>
+                    <ApiIcon/>
                 </template>
                 <template #text>
-                    <h3>View HTTP headers and HTTP communication</h3>
-                    <p>
-                        Deep packet inspection allows you to dive 
-                        into HTTP communications. Explore HTTP 
-                        requests and responses. Web servers information 
-                        and payloads, collect forms data and analyze 
-                        transferred content.
-                    </p>
-                    <p>
-                        Wonder to view established HTTP sessions 
-                        and users credentials? Find transferred files 
-                        including office documents? Use A-Packets network 
-                        traffic analysis and integrated pcap file viewer.
-                    </p>
-                    <p>
-                        Analyze pcap file to investigate HTTP data in 
-                        details. View network traffic, rebuild 
-                        client-server communications step by step.
-                    </p>
+                    <h3>Pcap files processing API</h3>
+                    <p>By using the <a target="_blank" href="/auto">API</a>, you can automate the process of uploading pcap files and parse them to extract useful information. This allows you to efficiently analyze large volumes of network data without requiring manual intervention for each individual file.</p>
+                    <p>One key advantage of using the API for pcap file analysis is the ability to schedule the process. This means that you can set up a regular schedule for uploading and analyzing pcap files, ensuring that you always have up-to-date information about your network traffic. The APIs can help you streamline your network analysis process and gain insights into your network's performance and security.</p>
+                
                 </template>
             </FeatureItem>
             <FeatureItem reverseItem="true">
                 <template #icon>
-                    <ScreenIcon/>
+                    <SslIcon/>
                 </template>
                 <template #text>
-                    <h3>View HTTP headers and HTTP communication</h3>
-                    <p>
-                        Deep packet inspection allows you to dive 
-                        into HTTP communications. Explore HTTP 
-                        requests and responses. Web servers information 
-                        and payloads, collect forms data and analyze 
-                        transferred content.
-                    </p>
-                    <p>
-                        Wonder to view established HTTP sessions 
-                        and users credentials? Find transferred files 
-                        including office documents? Use A-Packets network 
-                        traffic analysis and integrated pcap file viewer.
-                    </p>
-                    <p>
-                        Analyze pcap file to investigate HTTP data in 
-                        details. View network traffic, rebuild 
-                        client-server communications step by step.
-                    </p>
+                    <h3>SSL/TLS Information</h3>
+                    <p>Our tool parses pcap files to extract SSL/TLS session information, which can be used to detect attacks, identify self-signed and expired certificates, and perform other security-related analyses.</p>
+                    <p>You can view detailed information about each session, including the source and destination IP addresses, the protocol version, the cipher suite used, and any certificate information. Additionally, our tool can identify anomalies in SSL/TLS traffic, such as unexpected cipher suites or expired certificates, helping you to detect potential attacks or configuration issues.</p>
+                    <p>Overall, our SSL/TLS diagnostic tool is an essential tool for anyone involved in network security. Whether you are a network administrator, security analyst, or researcher, our tool can provide valuable insights into SSL/TLS traffic that can help you identify and mitigate potential threats.</p>
                 </template>
             </FeatureItem>
         </section>
@@ -360,5 +312,12 @@ export default {
 h3 {
     text-align: center;
     line-height: 2.5rem;
+}
+
+/* Phone */
+@media screen and (max-width: 800px) {    
+    .main {
+        flex-direction: column;
+    }
 }
 </style>

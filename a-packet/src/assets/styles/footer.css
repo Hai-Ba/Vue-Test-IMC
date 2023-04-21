@@ -54,3 +54,10 @@ footer {
     background-image: url(../img/gmail.png);
     background-repeat: no-repeat;
 }
+
+/* Phone */
+@media screen and (max-width: 600px) {    
+    footer {
+        flex-direction: column;
+    }
+}

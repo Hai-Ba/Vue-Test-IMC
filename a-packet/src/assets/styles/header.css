@@ -12,6 +12,74 @@ header {
     width: 100%;
 }
 
+.side_menu {
+  display: none;
+}
+
+.hamb {
+  cursor: pointer;
+  display: none;
+  float: right;
+  padding: 40px 20px;
+}
+
+.hamb_line {
+  background-color: #fff;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+}
+
+.hamb_line:before, .hamb_line:after{
+  background-color: #fff;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.hamb_line:after{
+  top: -5px;
+}
+
+.hamb_line:before {
+  top: 5px;
+}
+
+.side_menu:checked ~ .hamb .hamb_line {
+  background: transparent;
+}
+
+.side_menu:checked ~ .hamb .hamb_line:before {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.side_menu:checked ~ .hamb .hamb_line:after {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.side_menu:checked ~ .navbar_wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.side_menu:checked ~ .navbar_wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+
+.side_menu:checked ~ .navbar_wrapper a {
+  margin-right: 10px;
+}
+
 .logo {
     display: flex;
     align-items: flex-start;
@@ -43,4 +111,21 @@ header {
 
 .navbar_wrapper > a:first-of-type {
   border: 0;
+}
+
+/* Phone */
+@media screen and (max-width: 600px) {
+  header {
+    display: block;
+    text-align: left;
+  }
+  .navbar_wrapper {
+    display: none;
+  }
+  .hamb {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: -15px;
+  }
 }

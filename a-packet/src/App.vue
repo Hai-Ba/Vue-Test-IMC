@@ -9,6 +9,10 @@ import AcapLogo from './components/icons/AcapLogo.vue';
     <a class="logo" href="/">
       <AcapLogo />
     </a>
+    <input type="checkbox" id="side_menu" class="side_menu">
+    <label class="hamb" for="side_menu">
+      <span class="hamb_line"></span>
+    </label>
     <div class="navbar_wrapper">
       <RouterLink to="/">Feature</RouterLink>
       <RouterLink to="/faq">FAQ</RouterLink>
@@ -16,7 +20,7 @@ import AcapLogo from './components/icons/AcapLogo.vue';
       <RouterLink to="/api">API</RouterLink>
       <RouterLink to="/price">Price</RouterLink>
       <RouterLink to="/pcaps">View Pcaps</RouterLink>
-      <RouterLink to="/price">My Pcaps</RouterLink>
+      <RouterLink to="/price">🔒 My Pcaps</RouterLink>
       <RouterLink to="/signin">Sign In</RouterLink>
     </div>
   </header>
@@ -54,32 +58,4 @@ import AcapLogo from './components/icons/AcapLogo.vue';
 @import url(./assets/styles/header.css);
 @import url(./assets/styles/footer.css);
 @import url(./assets/styles/content.css);
-
-
-/* @media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-} */
 </style>

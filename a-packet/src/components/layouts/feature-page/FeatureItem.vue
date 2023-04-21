@@ -49,4 +49,14 @@ export default {
     display: flex;
     justify-content: center;
 }
+
+@media screen and (max-width: 800px) {    
+    .ft_item {
+        flex-direction: column;
+    }
+
+    .ft_item_reverse {
+        flex-direction: column;
+    }
+}
 </style>
