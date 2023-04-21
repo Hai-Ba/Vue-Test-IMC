@@ -10,6 +10,7 @@ import ArpIcon from '../components/icons/feature-icons/ArpIcon.vue';
 import KeyIcon from '../components/icons/feature-icons/KeyIcon.vue';
 import ApiIcon from '../components/icons/feature-icons/ApiIcon.vue';
 import SslIcon from '../components/icons/feature-icons/SslIcon.vue';
+import MainButton from '../components/buttons/MainButton.vue'
 
 
 // import ScreenIcon from '../components/icons/feature-icons';
@@ -20,6 +21,7 @@ import SslIcon from '../components/icons/feature-icons/SslIcon.vue';
             <div>
                 <h1>A-Packets</h1>
                 <h2>Online pcap file analyzer</h2>
+                <br>
                 <p>Allow read and view pcap file online. 
                     Explore IPv4/IPv6, HTTP, Telnet, FTP, DNS, 
                     SSDP, WPA2 protocols details. You can build 
@@ -27,6 +29,7 @@ import SslIcon from '../components/icons/feature-icons/SslIcon.vue';
                     communications. Sniff and analyze network 
                     traffic and other pcap data.
                 </p>
+                <br>
                 <p>
                     Analyse pcap files to view HTTP headers, 
                     request and response data. Extract transferred 
@@ -34,8 +37,10 @@ import SslIcon from '../components/icons/feature-icons/SslIcon.vue';
                     for various protocols.
                 </p>
                 <hr>
-                <button>abc</button>
-                <button>abc</button>
+                <div class="btn_holder">
+                    <MainButton text="View analyzed pcaps"/>
+                    <MainButton text="Upload pcap file"/>
+                </div>
             </div>
             <div class="video_wrapper">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/TVzLAmQvw_U" frameborder="0"></iframe>
@@ -279,7 +284,7 @@ export default {
     max-width: 80%;
 }
 
-.main div {
+.main > div {
     flex-basis: 0;
     flex-grow: 1;
     font-size: 1.3em;
@@ -287,6 +292,11 @@ export default {
     text-align: justify;
 }
 
+.btn_holder {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
 .video_wrapper {
     border-radius: 0.25rem!important;
     display: block;
