@@ -1,6 +1,12 @@
 <script setup>
 import FeatureItem from '../components/layouts/feature-page/FeatureItem.vue';
 import ScreenIcon from '../components/icons/feature-icons/ScreenIcon.vue';
+import WiFi from '../components/icons/feature-icons/WiFi.vue';
+import ConnectCircle from '../components/icons/feature-icons/ConnectCircle.vue';
+import PcapIcon from '../components/icons/feature-icons/PcapIcon.vue';
+import SmbIcon from '../components/icons/feature-icons/SmbIcon.vue';
+
+// import ScreenIcon from '../components/icons/feature-icons';
 </script>
 <template >
     <div class="ft_container app_bg_color">
@@ -65,10 +71,10 @@ import ScreenIcon from '../components/icons/feature-icons/ScreenIcon.vue';
             </FeatureItem>
             <FeatureItem reverseItem="true">
                 <template #icon>
-                    <ScreenIcon/>
+                    <ConnectCircle/>
                 </template>
                 <template #text>
-                    <h3>View HTTP headers and HTTP communication</h3>
+                    <h3>Find devices on network</h3>
                     <p>
                         Deep packet inspection allows you to dive 
                         into HTTP communications. Explore HTTP 
@@ -91,10 +97,10 @@ import ScreenIcon from '../components/icons/feature-icons/ScreenIcon.vue';
             </FeatureItem>
             <FeatureItem>
                 <template #icon>
-                    <ScreenIcon/>
+                    <WiFi/>
                 </template>
                 <template #text>
-                    <h3>View HTTP headers and HTTP communication</h3>
+                    <h3>Gather WiFi Information</h3>
                     <p>
                         Deep packet inspection allows you to dive 
                         into HTTP communications. Explore HTTP 
@@ -117,10 +123,10 @@ import ScreenIcon from '../components/icons/feature-icons/ScreenIcon.vue';
             </FeatureItem>
             <FeatureItem reverseItem="true">
                 <template #icon>
-                    <ScreenIcon/>
+                    <PcapIcon/>
                 </template>
                 <template #text>
-                    <h3>View HTTP headers and HTTP communication</h3>
+                    <h3>Extract files from pcap</h3>
                     <p>
                         Deep packet inspection allows you to dive 
                         into HTTP communications. Explore HTTP 
@@ -143,10 +149,10 @@ import ScreenIcon from '../components/icons/feature-icons/ScreenIcon.vue';
             </FeatureItem>
             <FeatureItem>
                 <template #icon>
-                    <ScreenIcon/>
+                    <SmbIcon/>
                 </template>
                 <template #text>
-                    <h3>View HTTP headers and HTTP communication</h3>
+                    <h3>SMB Sniffer</h3>
                     <p>
                         Deep packet inspection allows you to dive 
                         into HTTP communications. Explore HTTP 
@@ -349,5 +355,10 @@ export default {
     text-align: center;
     line-height: 30px;
     margin-bottom: 40px;
+}
+
+h3 {
+    text-align: center;
+    line-height: 2.5rem;
 }
 </style>

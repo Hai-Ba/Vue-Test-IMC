@@ -1,0 +1,3 @@
+<template>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.1 51.2" height="193.5" width="250"><circle cx="-54.2" cy="-7.6" transform="matrix(-.70474 -.70947 .72492 -.68884 0 0)" fill="#3aaaff" paint-order="stroke fill markers" r="7.6"></circle><path d="M18.8 29.6A20 19.5 0 0 1 47 30" fill="none" stroke="#3aaaff" stroke-width="10.6" stroke-linecap="round" stroke-opacity=".9" paint-order="stroke fill markers"></path><path d="M5.3 16.1a39.2 38.4 0 0 1 55.5.8" fill="none" stroke="#3aaaff" stroke-width="10.6" stroke-linecap="round" paint-order="stroke fill markers"></path></svg>
+</template>

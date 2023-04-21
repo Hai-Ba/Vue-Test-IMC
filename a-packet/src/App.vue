@@ -22,7 +22,12 @@ import AcapLogo from './components/icons/AcapLogo.vue';
   </header>
 
   <div class="content">
-    <RouterView />
+    <router-view v-slot="{ Component, route }">
+      <!-- Use any custom transition and  to `fade` -->
+      <transition :name="route.meta.transition || 'fade'">
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </div>
 
   <!-- Footer -->

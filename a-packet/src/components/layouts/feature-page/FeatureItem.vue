@@ -37,6 +37,10 @@ export default {
     min-width: 250px;
 }
 
+.ft_item_text h3{
+    text-align: center;
+}
+
 .ft_item_text {
     text-align: justify;
 }
