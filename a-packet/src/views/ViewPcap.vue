@@ -1,5 +1,5 @@
 <template >
-    <div>
+    <div class="pcap">
         Pcaps VIEW
     </div>
 </template>
@@ -9,5 +9,7 @@ export default {
 }
 </script>
 <style scoped>
-    
+.pcap {
+    min-height: 825px;
+}
 </style>

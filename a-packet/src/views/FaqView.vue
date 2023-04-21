@@ -108,13 +108,16 @@ export default {
 <style scoped>
 .faq {
     min-height: 825px;
+    margin: 0 auto;
+    max-width: 80%;
+    text-align: left;
 }
 
 .faq_title {
     font-size: 1.8rem;
     font-weight: 800;
     padding-left: 30px;
-    color: red;
+    /* color: red; */
 }
 
 .faq_item p a {
