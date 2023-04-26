@@ -13,6 +13,11 @@
 .app_bg_color {
   background-color: var(--vt-c-black);
 }
+
+.router-link-active {
+  /* background-color: white; */
+  color: red;
+}
 /*
 a,
 .green {

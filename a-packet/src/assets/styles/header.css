@@ -92,9 +92,9 @@ header {
     /* border-bottom: 4px solid red; */
 }
     
-.navbar_wrapper > a.router-link-exact-active {
+/* .navbar_wrapper > a.router-link-exact-active {
   color: red;
-}
+} */
 /* 
 .navbar_wrapper > a.router-link-exact-active:hover {
   background-color: red;
@@ -105,7 +105,7 @@ header {
   padding: 10px 10px;
   border-left: 1px solid var(--color-border);
   text-decoration: none;
-  color: #aaa;
+  /* color: #aaa; */
   font-size: 1.1rem;
 }
 

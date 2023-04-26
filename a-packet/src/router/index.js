@@ -1,13 +1,25 @@
 import { createRouter, createWebHistory } from 'vue-router'
 // import HomeView from '../views/HomeView.vue'
-import FeatureView from '../views/FeatureView.vue' 
+import FeatureView from '../views/FeatureView.vue'
+// import pcap from './pcap.js'; 
+
+// const routes = [...pcap];
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      // name: 'home',
+      name: 'home',
+      component: FeatureView,
+      meta: {
+        title: '🔍 Online PCAP file analyzer designed to visualize HTTP 🌐, Telnet, FTP',
+        transition: 'slide-left'
+      }
+    },
+    {
+      path: '/#feature-list',
+      name: 'feature',
       component: FeatureView,
       meta: {
         title: '🔍 Online PCAP file analyzer designed to visualize HTTP 🌐, Telnet, FTP',
@@ -16,10 +28,7 @@ const router = createRouter({
     },
     {
       path: '/faq',
-      // name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      name: 'home-faq',
       component: () => import('../views/FaqView.vue'),
       meta: {
         title: '❓ A-Packets | FAQ',
@@ -28,6 +37,7 @@ const router = createRouter({
     },
     {
       path: '/upload',
+      name: 'home-upload',
       component: () => import('../views/UploadView.vue'),
       meta: {
         title: '🔄 Upload pcap file to analyze and view HTTP, FTP, Telnet, DNS, WiFi',
@@ -36,6 +46,7 @@ const router = createRouter({
     },
     {
       path: '/api',
+      name: 'home-api',
       component: () => import('../views/ApiView.vue'),
       meta: {
         title: '⚙️ A-Packets | API REST Key usage',
@@ -44,22 +55,48 @@ const router = createRouter({
     },
     {
       path: '/price',
+      name: 'home-price',
       component: () => import('../views/PriceView.vue'),
       meta: {
         title: '💳 A-Packets - Choose a plan to upload and analyze HTTP, FTP, Telnet, DNS',
         transition: 'slide-left'
       }
     },
+    // routes,//routes for pcap
     {
       path: '/pcaps',
+      name: 'home-pcaps',
       component: () => import('../views/ViewPcap.vue'),
       meta: {
         title: '📜 Online pcap files viewer for analyze HTTP, DNS, other network traffic',
         transition: 'slide-left'
-      }
+      },
+      children: [
+        {
+            path: "list",
+            name: "pcap-list",
+            component:() => import('../components/layouts/pcaps/PcapList.vue'),
+        },
+        {
+            path: "charts",
+            name: "pcap-charts",
+            component:() => import('../components/layouts/pcaps/PcapChart.vue')
+        },
+        {
+            path: "creds",
+            name: "pcap-creds",
+            component:() => import('../components/layouts/pcaps/PcapCred.vue')
+        },
+        {
+            path: "dns",
+            name: "pcap-dns",
+            component:() => import('../components/layouts/pcaps/PcapDns.vue')
+        }
+    ]
     },
     {
       path: '/signin',
+      name: 'home-signin',
       component: () => import('../views/SignIn.vue'),
       meta: {
         title: '🔍 Sign In to A-Packets',

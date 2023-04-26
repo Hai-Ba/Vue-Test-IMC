@@ -6,20 +6,19 @@ import AcapLogo from './components/icons/AcapLogo.vue';
 <template>
   <!-- Header -->
   <header class="app_bg_color">
-    <a class="logo" href="/">
-      <AcapLogo />
-    </a>
+    <RouterLink class="logo" to="/"><AcapLogo/></RouterLink>
+
     <input type="checkbox" id="side_menu" class="side_menu">
     <label class="hamb" for="side_menu">
       <span class="hamb_line"></span>
     </label>
     <div class="navbar_wrapper">
-      <RouterLink to="/">Feature</RouterLink>
+      <RouterLink to="/#feature-list">Feature</RouterLink>
       <RouterLink to="/faq">FAQ</RouterLink>
       <RouterLink to="/upload">Upload</RouterLink>
       <RouterLink to="/api">API</RouterLink>
       <RouterLink to="/price">Price</RouterLink>
-      <RouterLink to="/pcaps">View Pcaps</RouterLink>
+      <RouterLink to="/pcaps/list">View Pcaps</RouterLink>
       <RouterLink to="/price">🔒 My Pcaps</RouterLink>
       <RouterLink to="/signin">Sign In</RouterLink>
     </div>
@@ -50,7 +49,10 @@ import AcapLogo from './components/icons/AcapLogo.vue';
         <div><a class="fb_icon"></a></div>
       </div>
     </div>
-    <p style="color: #ccc;">©<a href="/">A-Packets</a> All Rights Reserved.</p>
+    <p style="color: #ccc;">©
+      <RouterLink to="/">A-Packet</RouterLink>
+      <!-- <a href="/">A-Packets</a>  -->
+      All Rights Reserved.</p>
   </footer>
 </template>
 
