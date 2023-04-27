@@ -18,6 +18,10 @@
   /* background-color: white; */
   color: red;
 }
+
+ul {
+  list-style-type: none;
+}
 /*
 a,
 .green {

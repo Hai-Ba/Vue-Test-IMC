@@ -11,7 +11,10 @@
             </ul>
         </div>
         <div class="container">
-            <div class="bread_cum"></div>
+            <ul class="bread_cum">
+                <li><router-link to="/pcaps/list"><font-awesome-icon class="pcap_icon" icon="fa-solid fa-list" /></router-link></li>
+                <li><router-link to="/pcaps/charts" class="bread_cum_item"> pcaps.pcapsaaaaaa</router-link></li>
+            </ul>
             <div class="content">
                 <router-view></router-view>
             </div>
@@ -90,17 +93,68 @@ export default {
 }
 
 .bread_cum {
-    /* margin: 20px; */
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 10px 10px;
     height: 50px;
     width: 100%;
-    background-color: aqua;
+    /* background-color: aqua; */
     border-radius: 4px;
+    overflow: hidden;
+}
+
+.bread_cum li{
+    /* min-width: 50px; */
+    width: fit-content;
+    position: relative;
+}
+
+.bread_cum li a{
+    min-width: 40px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #DDDDDD;
+    background-image: linear-gradient(to right, #f5f5f5, #ddd);
+    color: black !important; 
+    font-size: 14px;
+}
+
+.bread_cum li a::after{
+    content: "";
+    position: absolute;
+    right: -15px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #DDDDDD;
+    z-index: 2;
+}
+
+.bread_cum li:first-child a{
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.bread_cum li a:hover{
+    background: #fff;
+}
+
+.bread_cum li a:hover::after {
+    border-left-color: #fff;
+    animation: all 3s timing-function delay iteration-count direction fill-mode;
+}
+
+.bread_cum_item {
+    padding-left: 20px;
+    padding-right: 10px;
+    background-image: linear-gradient(to right, #f5f5f5, #ddd);
 }
 
 .content {
-    height: 100%;
+    /* height: 100%; */
+    padding: 0 0 10px 10px;
     width: 100%;
     border-radius: 4px;
-    background-color: blue;
 }
 </style>
