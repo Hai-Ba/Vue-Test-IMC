@@ -13,7 +13,7 @@
         <div class="container">
             <ul class="bread_cum">
                 <li><router-link to="/pcaps/list"><font-awesome-icon class="pcap_icon" icon="fa-solid fa-list" /></router-link></li>
-                <li><router-link to="/pcaps/charts" class="bread_cum_item"> pcaps.pcapsaaaaaa</router-link></li>
+                <li><router-link to="/pcaps/charts" class="bread_cum_item"> abc.pcap</router-link></li>
             </ul>
             <div class="content">
                 <router-view></router-view>
