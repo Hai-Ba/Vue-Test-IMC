@@ -24,3 +24,4 @@ d)FAQ Page:
        
 3) Result and Code:
 -Link Repo: https://github.com/Hai-Ba/Vue-Test-IMC
+_Link web Deploy: https://hai-ba.github.io/deploying-a-packet/
